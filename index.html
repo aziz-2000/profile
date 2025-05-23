@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- خط تجوال -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #1c1c1e;
+      font-family: 'Tajawal', sans-serif;
+      transition: all 0.3s ease;
+    }
+    body.arabic {
+      direction: rtl;
+      text-align: right;
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <!-- Top Navigation -->
+  <header class="w-full flex items-center gap-4 px-8 py-4 bg-[#1c1c1e] z-50">
+    <!-- nav في المنتصف -->
+    <nav class="mx-auto">
+      <ul id="nav-links" class="flex space-x-6 rtl:space-x-reverse">
+        <li><a href="index.html" class="text-gray-400 hover:text-green-400">About Me</a></li>
+        <li><a href="Work.html" class="text-gray-400 hover:text-green-400">My Work</a></li>
+        <li><a href="badge.html" class="text-gray-400 hover:text-green-400">Badges&Certifications</a></li>
+      </ul>
+    </nav>
+  
+    <!-- زر تغيير اللغة -->
+    <button id="to-ar-btn" class="bg-green-500 text-black px-4 py-2 rounded-full hover:bg-green-400 text-sm">
+      Arabic
+    </button>
+  </header>
+  
+  
+
+  <div class="min-h-screen flex flex-col md:flex-row">
+
+    <!-- Sidebar -->
+    <aside class="bg-[#2a2a2d] w-full md:w-1/3 p-6 flex flex-col items-center justify-between">
+      <div class="flex flex-col items-center">
+        <img src="./img.JPG" alt="Profile" class="w-40 h-40 rounded-xl mb-4">
+        <h1 id="name" class="text-2xl font-bold">Abdulazeez Al-Mashani</h1>
+        <p id="title" class="text-gray-400 mt-1">Bachelor of Cybersecurity and Information Security</p>
+        <p class="mt-4 text-sm">abdulaziz.almashni@gmail.com</p>
+        <p class="text-sm text-gray-400">Dhofar, Sultanate of Oman</p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-github"></i></a>
+          <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+        <a href="mailto:abdulaziz.almashni@gmail.com" class="mt-6 bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-400 inline-flex items-center">
+          <i class="fa fa-envelope mr-2"></i> Hire Me!</a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 p-10">
+      <section id="about">
+        <span id="intro-label" class="text-sm text-gray-400 uppercase tracking-widest">Introduce</span>
+        <h2 id="intro-title" class="text-4xl font-bold mt-2"> <span class="text-green-400">Profile Summary</span></h2>
+        <p id="intro-desc" class="text-gray-400 mt-4 max-w-xl">
+          I am a Cybersecurity and Information Security graduate from UTAS,
+Salalah, with expertise in ethical hacking, web development, and server
+management. I have led teams, excelled in competitions, and contributed to both community and workplace initiatives, driven by a passion for solving cybersecurity challenges and mentoring others.
+        </p>
+      </section>
+
+      <section class="mt-10 flex gap-10">
+        <div>
+          <h3 class="text-3xl font-bold text-green-400">15+</h3>
+          <p id="exp-label" class="text-sm text-gray-400">Projects</p>
+        </div>
+        
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="mt-16">
+        <h2 id="projects-title" class="text-3xl font-bold mb-4">Education</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-[#2a2a2d] p-4 rounded-xl">
+            <h3 id="proj1-title" class="text-xl font-semibold">2018 - 2025</h3>
+            <p id="proj1-desc" class="text-gray-400">UNIVERSITY OF TECHNOLOGY AND
+              APPLIED SCIENCES, SALALAH<br>
+              Bachelor of Cyber and information Security</p>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Competitions Section -->
+      <section id="competitions" class="mt-16">
+        <h2 id="comp-title" class="text-3xl font-bold mb-4">Skills</h2>
+        <ul id="comp-list" class="list-disc list-inside text-gray-400">
+          <li>Ethical hacking and penetration testing.</li>
+          <li>Vulnerability assessment and security auditing</li>
+          <li>Proficient in Python, HTML, CSS, and JavaScript</li>
+          <li>Web application design and security implementation.</li>
+          <li>Network configuration, server setup, and maintenance.</li>
+          <li>Leadership and team management.</li>
+          <li>Problem-solving and analytical thinking.</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('to-ar-btn').addEventListener('click', () => {
+      window.location.href = './ar/index.html';  // رابط الصفحة العربية
+    });
+  </script>
+</body>
+</html>
